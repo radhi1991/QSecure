@@ -22,6 +22,11 @@ npm run dev
 
 Visit `http://localhost:3000` in your web browser to access the application. The application consists of a sidebar for navigation and a main content area where users can interact with the features of QSecure Exchange.
 
+## UI
+
+<img width="1229" alt="Screenshot 2025-02-19 at 8 48 45 PM" src="https://github.com/user-attachments/assets/77f6bbfd-44fe-4690-bfd9-fb34b5eb95b5" />
+
+
 ## How the App Works
 
 ### Functionality Overview
