@@ -1,7 +1,7 @@
 # QSecure Exchange
 
 ## Description
-QSecure Exchange is a secure platform designed for exchanging sensitive information. It prioritizes user privacy and data integrity, ensuring that all communications are encrypted and protected from unauthorized access. The application is built using Next.js, featuring a responsive layout with a sidebar for navigation and a main content area that displays the application's core functionality.
+QSecure Exchange is a secure platform designed for exchanging sensitive information esp File Exchange . It prioritizes user privacy and data integrity, ensuring that all communications are encrypted and protected from unauthorized access. The application is built using Next.js, featuring a responsive layout with a sidebar for navigation and a main content area that displays the application's core functionality.
 
 ## Installation Instructions
 To install QSecure Exchange, clone the repository and install the required dependencies:
