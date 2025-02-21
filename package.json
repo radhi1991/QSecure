@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"node server.js\" \"next start\"",
+    "server": "node server.js",
+    "next-start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -65,8 +66,12 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "7.6.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1"
   }
 }

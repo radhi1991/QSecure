@@ -2,8 +2,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { FileText, Share2, Clock } from "lucide-react"
 import Link from "next/link"
+import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function Dashboard() {
+  const [fileName, setFileName] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleShareFile = async () => {
+    setLoading(true);
+    console.log(`Starting encryption for file: ${fileName}`);
+    // Simulate encryption process
+    try {
+      const recipientEmail = 'recipient@example.com'; // Replace with actual recipient email
+      // Call backend to share the file
+      const response = await axios.post('/share-file', { file_name: fileName, recipient_email: recipientEmail });
+      console.log(`File shared successfully: ${response.data.message}`);
+    } catch (error) {
+      console.error('Error sharing file:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
@@ -45,10 +66,12 @@ export default function Dashboard() {
               <Clock className="mr-2 h-4 w-4" />
               View Expiring Shares
             </Button>
+            <input type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} placeholder="Enter file name" />
+            <button onClick={handleShareFile} disabled={loading}>Share File</button>
+            {loading && <p>Encrypting and sharing your file...</p>}
           </CardContent>
         </Card>
       </div>
     </div>
   )
 }
-
