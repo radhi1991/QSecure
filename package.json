@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"node server.js\" \"next start\"",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+     "predeploy": "yarn build",
+  "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
